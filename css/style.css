@@ -1,0 +1,204 @@
+/* Color Section */
+
+:root {
+  --primary-color: #1c060b;
+  --secondary-color: #901e3e;
+  --thirty-color: #dc2525;
+  --four-color: ;
+}
+
+/* Html */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1px;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: #eeeeee;
+}
+
+/* Style */
+.navbar {
+  position: fixed;
+  display: flex;
+  height: 50px;
+  top : 10px;
+  width : 100%;
+  padding: 0px 15px 15px 15px;
+  z-index: 10;
+  animation: anime 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #eeeeee;
+    justify-content: space-around;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: #eeeeee;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.title {
+  font-size: 55px;
+  font-weight: 700;
+  display: flex;
+  align-items: left;
+  gap: 20px;
+
+  transform: translateX(-100%);
+  animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+.desk {
+  display: flex;
+  transform: translateX(-100%);
+  animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+.desk1 {
+  display: flex;
+  transform: translateX(-100%);
+  animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.name-wrapper {
+  position: relative;
+  height: 76px;
+  overflow: hidden;
+}
+
+.name-slider {
+  display: flex;
+  flex-direction: column;
+  animation: slide 10s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.name-slider span {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  color: #a50505;
+}
+
+
+.panel {
+  display: flex;
+  color: aliceblue;
+  font-size: 30px;
+  height: 100vh;
+  top: 0;
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.welcome {
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+.about {
+  background-color: #b01212ed;
+  z-index: 1;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  background-color: #a11e3c;
+  z-index: 2;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  background-color: #1c060b;
+  z-index: 3;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation */
+
+@keyframes anime {
+  from {
+    opacity: 1;
+    transform: translate(0%,-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%,0);
+  }
+}
+
+@keyframes slide {
+  0%,
+  45% {
+    transform: translateY(0);
+  }
+
+  50%,
+  95% {
+    transform: translateY(-76px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideX {
+  0%, 40% {
+    transform: translateX(0%);
+  }
+
+  50%, 90% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes revealLeft {
+  to {
+    transform: translateX(0);
+  }
+}
