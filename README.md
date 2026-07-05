@@ -20,4 +20,4 @@ Website portfolio pribadi yang saya buat menggunakan HTML, CSS, dan JavaScript.
 
 ## Author
 
-Musaa
+Himeyorii
