@@ -12,6 +12,11 @@
     src: url("../assets/fonts/SAMENTtrial.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "MizunamiDemoRegular";
+    src: url("../assets/fonts/MizunamiDemoRegular.ttf") format("truetype");
+}
+
 /* Html */
 
 html {
@@ -47,6 +52,17 @@ body {
     z-index: 1000;
 }
 
+.logo {
+  background-image: var(--thirty-color);
+  font-family: SAMEN , serif;
+  font-size: 58px;
+   -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
 .nav ul {
     color: #d80000;
     display: flex;
@@ -65,6 +81,34 @@ body {
   color: #80C8F6;
 }
 
+.container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  /* border: 1px solid black; */
+  padding: 0px;
+  margin: 0px;
+  height: 600px;
+}
+
+.text {
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.profilepict {
+  margin: auto;
+  /* border: 1px solid black; */
+  
+}
+
+.profile {
+  height: 300px;
+  padding-right: 100px;
+  padding-top: 20px;
+}
+
+
 .title {
   font-size: 55px;
   font-weight: 700;
@@ -77,20 +121,28 @@ body {
   animation-delay: 0.3s;
 }
 
-/* .Himeyorii {
-  font-family: SAMEN , serif;
-}  */
+.H {
+  background-image: var(--thirty-color);
+  font-family: SAMEN , light;
+  font-size: 64px;
+   -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* letter-spacing: 8px; */
+  padding: 0px;
+} 
 
 .desk {
   display: flex;
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   animation-delay: 0.4s;
 }
 
 .desk1 {
   display: flex;
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   animation-delay: 0.5s;
 }
