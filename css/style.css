@@ -1,10 +1,15 @@
 /* Color Section */
 
 :root {
-  --primary-color: #1d1c27;
-  --secondary-color: #80C8F6;
-  --thirty-color: #3957ed;
+  --primary-color: linear-gradient(#ffffff, #c1c1c1);
+  --secondary-color: linear-gradient(#80C8F6, #3957ed);
+  --thirty-color: linear-gradient( 180deg,#Ec0901,#d90404,#960428);
   --four-color: ;
+}
+
+@font-face {
+    font-family: "SAMEN";
+    src: url("../assets/fonts/SAMENTtrial.ttf") format("truetype");
 }
 
 /* Html */
@@ -15,43 +20,49 @@ html {
 }
 
 body {
-  background-color: var(--primary-color);
-  color: #eeeeee;
+  background: #f6f6f6;
+  color: rgb(36, 47, 56);
 }
 
 /* Style */
-.navbar {
-  position: fixed;
-  display: flex;
-  height: 50px;
-  top : 10px;
-  width : 100%;
-  padding: 0px 15px 15px 15px;
-  z-index: 10;
-  animation: anime 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+
+
+.nav {
+    position: fixed;         
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+
+    padding: 15px 60px;
+    background: rgb(235, 235, 235);
+
+
+    border-radius: 50px;
+    z-index: 1000;
 }
 
-.navbar-nav .nav-link {
-    position: relative;
-    text-decoration: none;
-    color: #eeeeee;
-    justify-content: space-around;
+.nav ul {
+    color: #d80000;
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-link::after {
-    content: "";
-    position: absolute;
-    background-color: #eeeeee;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: 0;
-    transition: 0.5s;
+.nav li a {
+  color: black;
+  text-decoration: none;
 }
 
-
-.nav-link:hover::after {
-    width: 100%;
+.nav li a:hover {
+  color: #80C8F6;
 }
 
 .title {
@@ -65,6 +76,10 @@ body {
   animation: revealLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   animation-delay: 0.3s;
 }
+
+/* .Himeyorii {
+  font-family: SAMEN , serif;
+}  */
 
 .desk {
   display: flex;
@@ -96,51 +111,11 @@ body {
   height: 76px;
   display: flex;
   align-items: center;
-  color: #a50505;
-}
-
-
-.panel {
-  display: flex;
-  color: aliceblue;
-  font-size: 30px;
-  height: 100vh;
-  top: 0;
-  margin-top: 20px;
-  padding: 40px;
-}
-
-.welcome {
-  justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  gap: 12px;
-}
-
-
-
-.about {
-  background-color: #b01212ed;
-  z-index: 1;
-  position: sticky;
-  justify-content: center;
-  align-items: center;
-}
-
-.project {
-  background-color: #a11e3c;
-  z-index: 2;
-  position: sticky;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact {
-  background-color: #1c060b;
-  z-index: 3;
-  position: sticky;
-  justify-content: center;
-  align-items: center;
+  background: var(--thirty-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Animation */
